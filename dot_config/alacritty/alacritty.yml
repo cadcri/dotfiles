@@ -1,0 +1,40 @@
+env:
+ TERM: xterm-256color
+ 
+import:
+   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+   
+window:
+  padding:
+    x: 3
+    y: 5
+  decorations: buttonless
+  opacity: 0.8
+  title: Alacritty
+  dynamic_title: true
+  option_as_alt: Both
+
+font:
+  size: 14.0
+  normal:
+    family: Menlo
+  bold:
+    family: Menlo
+    style: Bold
+  italic:
+    family: Menlo 
+    style: Italic
+  bold_italic:
+    family: Menlo
+    style: Bold Italic
+
+cursor:
+    style:
+      shape: Block
+    blinking: Off
+live_config_reload: true
+#shell:
+ # program: /opt/homebrew/bin/emacs
+working_directory: None
+mouse:
+  hide_when_typing: true

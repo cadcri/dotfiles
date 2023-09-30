@@ -3,11 +3,11 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term foot
+set $term alacritty
 
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/Pictures/wall.jpg fill
 output eDP-1 resolution 2560x1664 position 2560,0
 output eDP-1 scale 1.0
 
@@ -24,13 +24,14 @@ output eDP-1 scale 1.0
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
-input "1452:849:Apple_MTP_multi-touch" {
+input "type:pointer" {
     dwt enabled
     tap enabled
     natural_scroll disabled
     middle_emulation enabled
+    accel_profile flat
 }
-input "1452:849:Apple_MTP_keyboard" {
+input "type:keyboard" {
     repeat_delay 200
     repeat_rate 40
     xkb_options ctrl:nocaps
@@ -120,10 +121,10 @@ bindsym $mod+r mode "resize"
 
 bar {
     position top
-    status_command while date +'%d/%m/%Y %I:%M:%S %p'; do sleep 1; done
-    height 60
+    status_command while date +'%d/%m/%Y %I:%M:%S %p '; do sleep 1; done
+    height 64
     font {
-    	 size 30
+    	 size 25
     }
     colors {
         statusline #ffffff
@@ -137,5 +138,3 @@ default_floating_border pixel
 
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
-
-include /etc/sway/config.d/*

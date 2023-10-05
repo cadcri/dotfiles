@@ -14,7 +14,7 @@ alt + shift - f : yabai -m window --swap east || $(yabai -m window --display eas
 alt + shift + ctrl - b : yabai -m window --resize left:-50:0 || yabai -m window --resize right:-50:0
 alt + shift + ctrl - n : yabai -m window --resize bottom:0:50 || yabai -m window --resize top:0:50
 alt + shift + ctrl - p : yabai -m window --resize top:0:-50 || yabai -m window --resize bottom:0:-50
-alt + shift + ctrl - f : yabai -m window --resize right:50:0 ||yabai -m window --resize left:50:0
+alt + shift + ctrl - f : yabai -m window --resize right:50:0 || yabai -m window --resize left:50:0
 
 # navigation spaces
 alt - 1 : yabai -m space --focus 1
@@ -28,11 +28,20 @@ alt + ctrl - 2 : yabai -m window --space 2
 alt + ctrl - 3 : yabai -m window --space 3
 alt + ctrl - 4 : yabai -m window --space 4
 
-# # mirror tree y-axis
-ctrl + alt - y : yabai -m space --mirror y-axis
+# close focused window
+alt + ctrl - w : yabai -m window --close
 
-# # mirror tree x-axis
-ctrl + alt  - x : yabai -m space --mirror x-axis
+
+
+
+
+# mirror tree y-axis
+alt + ctrl - y : yabai -m space --mirror y-axis
+
+# mirror tree x-axis
+alt + ctrl - x : yabai -m space --mirror x-axis
+
+
 
 # balance size of windows
 ctrl + alt - 0 : yabai -m space --balance
@@ -43,5 +52,3 @@ ctrl + alt - 0 : yabai -m space --balance
 # toggle window native fullscreen
 alt + shift - f : yabai -m window --toggle native-fullscreen
 
-# close focused window
-ctrl + alt - w : yabai -m window --close
